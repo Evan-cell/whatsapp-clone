@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
-import { Avatar } from "@material-ui/core";
+import { Avatar, IconButton } from "@material-ui/core";
+import { SearchOutlined, MoreVert,AttachFile} from '@material-ui/icons';
 import "./chat.css"
 function Chat() {
     const [seed, setSeed] = useState('');
@@ -13,8 +14,19 @@ function Chat() {
         <Avatar src={`http://avatars.dicebear.com/api/human/${seed}.svg`} />
         <div className='chat__headerInfo'>
             <h3>Room name</h3>
-            <p>lastseen</p>
+            <p>lastseen....</p>
             </div>
+            <div className="chat__headerRight">
+            <IconButton>
+              <SearchOutlined />
+              </IconButton>
+              <IconButton>
+              <AttachFile />
+              </IconButton>
+              <IconButton>
+              <MoreVert />
+              </IconButton>
+                </div>
             </div>
         <div className='chat__body'></div>
         <div className='chat__footer'></div>
