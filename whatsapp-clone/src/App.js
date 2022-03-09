@@ -1,12 +1,15 @@
 import React from 'react'
+
 import './App.css';
+import Sidebar from './Sidebar';
 
 function App() {
   return (
     <div className="app">
-      <h1>whatsapp clone</h1>
+      
       <div className='app__body'>
         {/* sidebar */}
+        <Sidebar />
         {/* chat */}
         </div>
     </div>
