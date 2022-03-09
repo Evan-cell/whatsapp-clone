@@ -28,5 +28,13 @@
 }
 .sidebar__searchContainer{
     display: flex;
-    
+    align-items: center;
+    border-radius: 20px;
+    height: 35px;
+    width: 100%;
+    background-color: white;
+}
+.sidebar__searchContainer > input{
+    border: none;
+    margin-left: 10px;
 }
