@@ -11,6 +11,11 @@
     border-bottom: 1px solid lightgrey;
 
 }
+.chat__footer > form{
+    flex: 1;
+    display: flex;
+}
+
 .chat__footer{
     display: flex;
     justify-content: space-between;
