@@ -15,13 +15,13 @@
     flex: 1;
     display: flex;
 }
-.chat__footer > input{
+.chat__footer > form > input{
     flex: 1;
     border-radius: 30px;
     padding: 10px;
     border: none;
 }
-.chat__footer > button{
+.chat__footer > form > button{
     display: none;
 }
 
