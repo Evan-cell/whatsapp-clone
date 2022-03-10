@@ -48,4 +48,5 @@
     background-color: white;
     flex: 1;
     overflow: scroll;
+    overflow-x: hidden;
 }

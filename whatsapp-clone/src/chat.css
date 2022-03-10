@@ -15,6 +15,15 @@
     flex: 1;
     display: flex;
 }
+.chat__footer > input{
+    flex: 1;
+    border-radius: 30px;
+    padding: 10px;
+    border: none;
+}
+.chat__footer > button{
+    display: none;
+}
 
 .chat__footer{
     display: flex;
@@ -22,6 +31,10 @@
     align-items: center;
     height: 62px;
     border-top: 1px solid lightgrey;
+}
+.chat__footer > .MuiSvgIcon-root{
+    color: grey;
+    padding: 10px;
 }
 .chat__reciever{
     margin-left: auto;
@@ -67,6 +80,7 @@
     flex: 1;
     background-repeat: repeat;
     overflow: scroll;
+    overflow-x: hidden;
     padding: 30px;
     background-position: center;
     background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
