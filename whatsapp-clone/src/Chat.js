@@ -1,10 +1,25 @@
 import React, {useEffect, useState} from 'react'
 import { Avatar, IconButton } from "@material-ui/core";
+import db from "./firebase.js"
+import {useParams} from "react-router-dom";
 import { SearchOutlined,InsertEmoticon,Mic, MoreVert,AttachFile} from '@material-ui/icons';
 import "./chat.css"
 function Chat() {
     const [input, setInput] = useState('');
     const [seed, setSeed] = useState('');
+    const {roomId} = useParams();
+    const [roomName, setRoomName] = useState("")
+
+    useEffect(() => {
+      if (roomId) {
+        db.collection('rooms').doc(roomsId).onSnapshot(snapshot => (
+          setRoomName(snapshot.data().name)
+        ))
+      }
+    }, [roomId])
+    
+
+
     useEffect(() => {
       setSeed(Math.floor(Math.random() * 5000));
       

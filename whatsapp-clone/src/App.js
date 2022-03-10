@@ -3,8 +3,7 @@ import React from 'react'
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  
+  Route
 } from "react-router-dom";
 import './App.css';
 import Sidebar from './Sidebar';
@@ -16,16 +15,15 @@ function App() {
       
       <div className='app__body'>
         <Router>
+        <Sidebar />
           <Switch>
-          <Sidebar />
-        {/* sidebar */}
         <Route path='/rooms/:roomId'>
         <Chat />
-          </Route>
+        </Route>
         
-          <Route path='/'>
+        <Route path='/'>
         <Chat />
-          </Route>
+        </Route>
           </Switch>
         </Router>
         
