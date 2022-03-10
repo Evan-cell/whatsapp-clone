@@ -1,5 +1,5 @@
 
-import React from 'react'
+import React, {useState} from 'react'
 import {
   BrowserRouter as Router,
   Switch,
@@ -7,11 +7,17 @@ import {
 } from "react-router-dom";
 import './App.css';
 import Sidebar from './Sidebar';
+import Login from './Login';
 import Chat from './Chat'
 
 function App() {
+  const [user,setUser] = useState(null)
   return (
     <div className="app">
+      {!user ? (
+        <Login />
+      ):(
+      
       
       <div className='app__body'>
         <Router>
@@ -28,6 +34,7 @@ function App() {
         </Router>
         
         </div>
+        )}
     </div>
   );
 }
