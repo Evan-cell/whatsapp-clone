@@ -11,9 +11,16 @@
     border-bottom: 1px solid lightgrey;
 
 }
+.chat__footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+    border-top: 1px solid lightgrey;
+}
 .chat__reciever{
     margin-left: auto;
-    background-color: #dcf8c6;
+    background-color: #dcf8c6 !important;
 }
 .chat__timestamp{
     margin-left: 10px;

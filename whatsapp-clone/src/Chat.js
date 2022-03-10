@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import { Avatar, IconButton } from "@material-ui/core";
-import { SearchOutlined, MoreVert,AttachFile} from '@material-ui/icons';
+import { SearchOutlined,InsertEmoticon,Mic, MoreVert,AttachFile} from '@material-ui/icons';
 import "./chat.css"
 function Chat() {
     const [seed, setSeed] = useState('');
@@ -29,13 +29,18 @@ function Chat() {
                 </div>
             </div>
         <div className='chat__body'>
-            <p className='chat__message chat__reciever'>
+            <p className={`chat__message ${ true && 'chat__reciever'}`}>
             <span className='chat__name'>kim</span>
                 hello dudes 
                 <span className='chat__timestamp'>22:37</span></p>
             
             </div>
-        <div className='chat__footer'></div>
+        <div className='chat__footer'>
+          <InsertEmoticon />
+          <input type='text'/>
+          <button>send message</button>
+          <Mic />
+          </div>
         </div>
   )
 }
