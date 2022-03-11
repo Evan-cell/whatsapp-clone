@@ -4,6 +4,7 @@ import { useStateValue } from "./StateProvider"
 import db from "./firebase.js"
 import Sidebarchat from "./Sidebarchat"
 import { Avatar, IconButton } from "@material-ui/core";
+
 import { DonutLarge, MoreVert,Chat, SearchOutlined } from '@material-ui/icons';
 function Sidebar() {
   const [rooms, setRooms] = useState([]);
@@ -25,7 +26,7 @@ function Sidebar() {
   return (
       <div className='sidebar'>
           <div className='sidebar__header'>
-            <Avatar />
+            <Avatar src={user?.photoURL} />
             <div className='sidebar__headerRight'>
               <IconButton>
               <DonutLarge />
