@@ -1,4 +1,4 @@
-
+import { useStateValue } from "./StateProvider"
 import React, {useState} from 'react'
 import {
   BrowserRouter as Router,
@@ -11,7 +11,8 @@ import Login from './Login';
 import Chat from './Chat'
 
 function App() {
-  const [user,setUser] = useState(null)
+  const [{ user }, dispatch] = useStateValue();
+  
   return (
     <div className="app">
       {!user ? (
