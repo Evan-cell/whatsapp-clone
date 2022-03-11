@@ -1,12 +1,13 @@
 import React, {useEffect, useState} from 'react'
 import "./Sidebar.css"
-
+import { useStateValue } from "./StateProvider"
 import db from "./firebase.js"
 import Sidebarchat from "./Sidebarchat"
 import { Avatar, IconButton } from "@material-ui/core";
 import { DonutLarge, MoreVert,Chat, SearchOutlined } from '@material-ui/icons';
 function Sidebar() {
   const [rooms, setRooms] = useState([]);
+  const [{ user }, dispatch] = useStateValue();
 
   useEffect(() => {
    const unsubscribe = db.collection('rooms').onSnapshot((snapshot )=> 
